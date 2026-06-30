@@ -1,0 +1,100 @@
+{
+  "instructions": [
+    {
+      "action": "Narrate",
+      "target": "System",
+      "parameters": {
+        "text": "We initialize the physical environment and introduce the core components of the system: Block 1, Block 2, Board, Floor."
+      }
+    },
+    {
+      "action": "Create",
+      "target": "Block 1",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Block 2",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Board",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Floor",
+      "parameters": {}
+    },
+    {
+      "action": "EndScene",
+      "target": "Scene 1: System Initialization",
+      "parameters": {}
+    },
+    {
+      "action": "Narrate",
+      "target": "System",
+      "parameters": {
+        "text": "Analyzing the state vectors reveals the following active interactions and operational constraints: Board ↔ Block 1 : Friction, Board ↔ Block 2 : Friction, Floor ↔ Board : Normal, Force F → Board."
+      }
+    },
+    {
+      "action": "Create",
+      "target": "Block 1",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Block 2",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Board",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Floor",
+      "parameters": {}
+    },
+    {
+      "action": "EndScene",
+      "target": "Scene 2: Core Dynamics and Interactions",
+      "parameters": {}
+    },
+    {
+      "action": "Narrate",
+      "target": "System",
+      "parameters": {
+        "text": "To solve the physics problem, we must resolve the mathematical boundaries for our primary objectives: Find F_min, Find F_max, Compute p + q."
+      }
+    },
+    {
+      "action": "Create",
+      "target": "Block 1",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Block 2",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Board",
+      "parameters": {}
+    },
+    {
+      "action": "Create",
+      "target": "Floor",
+      "parameters": {}
+    },
+    {
+      "action": "EndScene",
+      "target": "Scene 3: Target Boundary Calculation",
+      "parameters": {}
+    }
+  ]
+}
