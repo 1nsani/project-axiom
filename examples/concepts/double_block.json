@@ -1,44 +1,35 @@
-# tests/models/test_concept.py
-import pytest
-from src.models.concept import Concept
-
-def test_create_concept():
-    """Test successful initialization of a Concept object."""
-    concept = Concept(
-        objects=["Board", "Block"],
-        quantities=["Mass"],
-        interactions=["Friction"],
-        constraints=["Static"],
-        goal=["Find F"]
-    )
-    assert concept.objects == ["Board", "Block"]
-    assert concept.quantities == ["Mass"]
-    assert concept.interactions == ["Friction"]
-    assert concept.constraints == ["Static"]
-    assert concept.goal == ["Find F"]
-
-def test_to_dict():
-    """Test that to_dict returns a valid dictionary matching the object state."""
-    concept = Concept(objects=["Board"], goal=["Find F"])
-    expected = {
-        "objects": ["Board"],
-        "quantities": [],
-        "interactions": [],
-        "constraints": [],
-        "goal": ["Find F"]
-    }
-    assert concept.to_dict() == expected
-
-def test_from_dict():
-    """Test that from_dict correctly hydrates a Concept object from valid data."""
-    data = {
-        "objects": ["Board", "Block"],
-        "quantities": ["m"],
-        "interactions": ["friction"],
-        "constraints": ["no-slip"],
-        "goal": ["p+q"]
-    }
-    concept = Concept.from_dict(data)
-    assert isinstance(concept, Concept)
-    assert concept.objects == ["Board", "Block"]
-    assert concept.goal == ["p+q"]
+{
+  "concept": {
+    "objects": [
+      "Block 1",
+      "Block 2",
+      "Board",
+      "Floor"
+    ],
+    "quantities": {
+      "m_block": "1 kg",
+      "m_board": "4 kg",
+      "mu_s1": 0.8,
+      "mu_s2": 0.4,
+      "mu_k": 0.3,
+      "g": "10 m/s^2",
+      "F": "Applied Force"
+    },
+    "interactions": [
+      "Board ↔ Block 1: Friction",
+      "Board ↔ Block 2: Friction",
+      "Floor ↔ Board: Normal",
+      "Force F → Board: External"
+    ],
+    "constraints": [
+      "Horizontal motion",
+      "Floor is frictionless",
+      "Block 2 slips before Block 1"
+    ],
+    "goal": [
+      "Find F_min",
+      "Find F_max",
+      "Compute p + q"
+    ]
+  }
+}
