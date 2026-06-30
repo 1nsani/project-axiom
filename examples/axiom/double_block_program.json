@@ -1,0 +1,157 @@
+{
+  "instructions": [
+    {
+      "action": "Narrate",
+      "target": "System",
+      "parameters": {
+        "text": "We initialize the physical environment and introduce the core components of the system: Block 1, Block 2, Board, Floor."
+      }
+    },
+    {
+      "action": "Create",
+      "target": "Floor",
+      "parameters": {
+        "type": "surface",
+        "properties": {
+          "frictionless": true
+        }
+      }
+    },
+    {
+      "action": "Create",
+      "target": "Board",
+      "parameters": {
+        "type": "rigid_body",
+        "mass": "4 kg"
+      }
+    },
+    {
+      "action": "Create",
+      "target": "Block 1",
+      "parameters": {
+        "type": "rigid_body",
+        "mass": "1 kg"
+      }
+    },
+    {
+      "action": "Create",
+      "target": "Block 2",
+      "parameters": {
+        "type": "rigid_body",
+        "mass": "1 kg"
+      }
+    },
+    {
+      "action": "Wait",
+      "target": "System",
+      "parameters": {
+        "duration": 1.0
+      }
+    },
+    {
+      "action": "EndScene",
+      "target": "Scene 1",
+      "parameters": {}
+    },
+    {
+      "action": "Narrate",
+      "target": "System",
+      "parameters": {
+        "text": "Analyzing the state vectors reveals the following active interactions and operational constraints: Board ↔ Block 1 : Friction, Board ↔ Block 2 : Friction, Floor ↔ Board : Normal, Force F → Board."
+      }
+    },
+    {
+      "action": "Move",
+      "target": "Board",
+      "parameters": {
+        "force": "F",
+        "direction": "right"
+      }
+    },
+    {
+      "action": "Show",
+      "target": "Friction Vector 1",
+      "parameters": {
+        "source": "Board",
+        "destination": "Block 1",
+        "label": "μs1 = 0.8"
+      }
+    },
+    {
+      "action": "Show",
+      "target": "Friction Vector 2",
+      "parameters": {
+        "source": "Board",
+        "destination": "Block 2",
+        "label": "μs2 = 0.4"
+      }
+    },
+    {
+      "action": "Label",
+      "target": "Constraint",
+      "parameters": {
+        "text": "Block 2 slips before Block 1"
+      }
+    },
+    {
+      "action": "Wait",
+      "target": "System",
+      "parameters": {
+        "duration": 1.5
+      }
+    },
+    {
+      "action": "EndScene",
+      "target": "Scene 2",
+      "parameters": {}
+    },
+    {
+      "action": "Narrate",
+      "target": "System",
+      "parameters": {
+        "text": "To solve the physics problem, we must resolve the mathematical boundaries for our primary objectives: Find F_min, Find F_max, Compute p + q."
+      }
+    },
+    {
+      "action": "Highlight",
+      "target": "F_min",
+      "parameters": {
+        "equation": "Threshold for critical slip threshold 1"
+      }
+    },
+    {
+      "action": "Highlight",
+      "target": "F_max",
+      "parameters": {
+        "equation": "Threshold for complete system breakaway"
+      }
+    },
+    {
+      "action": "Transform",
+      "target": "Equations",
+      "parameters": {
+        "operation": "Summation",
+        "expression": "p + q"
+      }
+    },
+    {
+      "action": "Compare",
+      "target": "F_min and F_max",
+      "parameters": {
+        "criteria": "Slipping sequence boundaries"
+      }
+    },
+    {
+      "action": "Wait",
+      "target": "System",
+      "parameters": {
+        "duration": 2.0
+      }
+    },
+    {
+      "action": "EndScene",
+      "target": "Scene 3",
+      "parameters": {}
+    }
+  ]
+}
