@@ -1,0 +1,54 @@
+{
+  "scenes": [
+    {
+      "title": "Scene 1: System Initialization",
+      "goal": "Introduce and visualize the baseline configuration of physical objects.",
+      "objects": [
+        "Block 1",
+        "Block 2",
+        "Board",
+        "Floor"
+      ],
+      "actions": [
+        "Create(Block 1)",
+        "Create(Block 2)",
+        "Create(Board)",
+        "Create(Floor)"
+      ],
+      "narration": "We initialize the physical environment and introduce the core components of the system: Block 1, Block 2, Board, Floor."
+    },
+    {
+      "title": "Scene 2: Core Dynamics and Interactions",
+      "goal": "Isolate and evaluate the acting force vectors and coupling interactions.",
+      "objects": [
+        "Block 1",
+        "Block 2",
+        "Board",
+        "Floor"
+      ],
+      "actions": [
+        "ApplyInteraction(Board ↔ Block 1 : Friction)",
+        "ApplyInteraction(Board ↔ Block 2 : Friction)",
+        "ApplyInteraction(Floor ↔ Board : Normal)",
+        "ApplyInteraction(Force F → Board)"
+      ],
+      "narration": "Analyzing the state vectors reveals the following active interactions and operational constraints: Board ↔ Block 1 : Friction, Board ↔ Block 2 : Friction, Floor ↔ Board : Normal, Force F → Board."
+    },
+    {
+      "title": "Scene 3: Target Boundary Calculation",
+      "goal": "Define and highlight the definitive target variables required to resolve the problem.",
+      "objects": [
+        "Block 1",
+        "Block 2",
+        "Board",
+        "Floor"
+      ],
+      "actions": [
+        "HighlightGoal(Find F_min)",
+        "HighlightGoal(Find F_max)",
+        "HighlightGoal(Compute p + q)"
+      ],
+      "narration": "To solve the physics problem, we must resolve the mathematical boundaries for our primary objectives: Find F_min, Find F_max, Compute p + q."
+    }
+  ]
+}
