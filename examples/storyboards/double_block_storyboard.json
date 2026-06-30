@@ -1,0 +1,52 @@
+{
+  "scenes": [
+    {
+      "title": "Scene 1: System Initialization",
+      "goal": "Introduce and visualize the physical objects and baseline state of the system.",
+      "objects": [
+        "Block 1",
+        "Block 2",
+        "Board",
+        "Floor"
+      ],
+      "actions": [
+        "Create(Floor, position=(0, 0))",
+        "Create(Board, position=(0, 1))",
+        "Create(Block 1, position=(-2, 2))",
+        "Create(Block 2, position=(2, 2))"
+      ],
+      "narration": "We begin with a flat, frictionless floor. On top of it sits a large board of mass 4 kg. Two smaller blocks, Block 1 and Block 2, each with a mass of 1 kg, are placed spaced apart on top of the board."
+    },
+    {
+      "title": "Scene 2: Application of Force and Friction Limits",
+      "goal": "Display the contact forces and expose the critical threshold where relative slipping begins.",
+      "objects": [
+        "Block 1",
+        "Block 2",
+        "Board"
+      ],
+      "actions": [
+        "ApplyForce(F, target=Board, direction=Right)",
+        "ShowFrictionVector(Board_to_Block1, value=f_s1)",
+        "ShowFrictionVector(Board_to_Block2, value=f_s2)"
+      ],
+      "narration": "A horizontal force F is applied directly to the board, pulling it to the right. Static friction couples the blocks to the board, pulling them forward. Because the static friction threshold for Block 2 is lower, it will reach its breaking point and slip before Block 1 does."
+    },
+    {
+      "title": "Scene 3: Threshold Calculation Matrix",
+      "goal": "Isolate the free-body dynamics to define the specific boundary conditions for p and q.",
+      "objects": [
+        "Block 1",
+        "Block 2",
+        "Board"
+      ],
+      "actions": [
+        "IsolateSystems()",
+        "ComputeThreshold(F_min)",
+        "ComputeThreshold(F_max)",
+        "HighlightGoal(p_plus_q)"
+      ],
+      "narration": "By evaluating the system parameters, we mathematically define the minimum force F_min required to initiate any slipping, and the maximum force F_max before total structural breakaway occurs. These values yield our variables p and q to resolve the required parameter summation."
+    }
+  ]
+}
