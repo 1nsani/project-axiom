@@ -1,35 +1,33 @@
 {
-  "concept": {
-    "objects": [
-      "Block 1",
-      "Block 2",
-      "Board",
-      "Floor"
-    ],
-    "quantities": {
-      "m_block": "1 kg",
-      "m_board": "4 kg",
-      "mu_s1": 0.8,
-      "mu_s2": 0.4,
-      "mu_k": 0.3,
-      "g": "10 m/s^2",
-      "F": "Applied Force"
-    },
-    "interactions": [
-      "Board ↔ Block 1: Friction",
-      "Board ↔ Block 2: Friction",
-      "Floor ↔ Board: Normal",
-      "Force F → Board: External"
-    ],
-    "constraints": [
-      "Horizontal motion",
-      "Floor is frictionless",
-      "Block 2 slips before Block 1"
-    ],
-    "goal": [
-      "Find F_min",
-      "Find F_max",
-      "Compute p + q"
-    ]
-  }
+  "objects": [
+    "Block 1",
+    "Block 2",
+    "Board",
+    "Floor"
+  ],
+  "quantities": [
+    "m_block = 1 kg",
+    "m_board = 4 kg",
+    "μs1 = 0.8",
+    "μs2 = 0.4",
+    "μk = 0.3",
+    "g = 10 m/s²",
+    "F"
+  ],
+  "interactions": [
+    "Board ↔ Block 1 : Friction",
+    "Board ↔ Block 2 : Friction",
+    "Floor ↔ Board : Normal",
+    "Force F → Board"
+  ],
+  "constraints": [
+    "Horizontal motion",
+    "Frictionless floor",
+    "Block 2 slips before Block 1"
+  ],
+  "goal": [
+    "Find F_min",
+    "Find F_max",
+    "Compute p + q"
+  ]
 }
