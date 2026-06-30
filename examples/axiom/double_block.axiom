@@ -1,0 +1,26 @@
+Scene 1
+Create(Floor)
+Create(Board)
+Create(Block1)
+Create(Block2)
+Create(Force_F)
+Narrate("We have a three-body system: two blocks placed on a long board. This board rests on a perfectly frictionless horizontal floor, and an external force F pulls the board straight to the right.")
+EndScene
+
+Scene 2
+Focus(Block1_Contact_Surface)
+Label(Block1, "\mu_{s1} = 0.8")
+Focus(Block2_Contact_Surface)
+Label(Block2, "\mu_{s2} = 0.4")
+Compare(\mu_{s1}, \mu_{s2})
+Narrate("The interaction between the blocks and the board is crucial. The first block in the rear has a static friction coefficient of 0.8, which is exactly twice as strong as the second block's coefficient of 0.4.")
+EndScene
+
+Scene 3
+Create(Variable_p)
+Label(Variable_p, "Minimum Force")
+Create(Variable_q)
+Label(Variable_q, "Maximum Force")
+Show(Objective_Equation_p_plus_q)
+Narrate("For the two blocks to eventually collide, the pulling force F must fall within a specific range. We need to find p, the minimum force required, and q, the maximum force allowed. The final objective is to calculate the sum of p and q.")
+EndScene
